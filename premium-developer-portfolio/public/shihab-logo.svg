@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+  <defs>
+    <linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2F6F63"/>
+      <stop offset="100%" stop-color="#1B4038"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background -->
+  <rect width="240" height="240" fill="#F7F5F1"/>
+
+  <!-- outer ring, deliberately open (not a closed circle) to feel hand-drawn / signature-like -->
+  <circle cx="120" cy="120" r="92" fill="none" stroke="url(#ring)" stroke-width="3"
+          stroke-dasharray="540 40" stroke-linecap="round" transform="rotate(-96 120 120)"/>
+
+  <!-- monogram: S and K sharing a common vertical stroke, "u" as a small raised tick for the middle name -->
+  <g font-family="'Georgia', 'Times New Roman', serif" fill="#14141C">
+    <text x="120" y="150" font-size="104" font-weight="600" text-anchor="middle"
+          letter-spacing="-6">SK</text>
+  </g>
+
+  <!-- small raised "u" marking the middle initial, tucked at the shoulder of the K -->
+  <text x="163" y="92" font-family="'Georgia', 'Times New Roman', serif" font-size="30"
+        font-style="italic" fill="#2F6F63" text-anchor="middle">u</text>
+
+  <!-- baseline accent dot -->
+  <circle cx="120" cy="178" r="3.5" fill="#2F6F63"/>
+</svg>
