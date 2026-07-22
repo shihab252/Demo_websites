@@ -34,13 +34,13 @@ const socialLinks = [
     {
         name: "GitHub",
         icon: FaGithub,
-        href: "https://github.com/yourusername",
+        href: "https://github.com/shihab252",
         color: "hover:bg-slate-900 hover:text-white",
     },
     {
         name: "LinkedIn",
         icon: FaLinkedin,
-        href: "https://linkedin.com/in/yourusername",
+        href: "https://www.linkedin.com/in/shihab-uddin-khan/",
         color: "hover:bg-blue-600 hover:text-white",
     },
     {
@@ -52,7 +52,7 @@ const socialLinks = [
     {
         name: "Email",
         icon: Mail,
-        href: "mailto:your@email.com",
+        href: "mailto:khanshihab252@email.com",
         color: "hover:bg-cyan-600 hover:text-white",
     },
 ];
