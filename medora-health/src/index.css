@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&family=Space+Mono:wght@400;700&display=swap");
+
+@import "tailwindcss";
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #102a43;
+  background: #f4f8fa;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #f4f8fa;
+  overflow-x: hidden;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+::selection {
+  background: #42d9ff;
+  color: #071522;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f4f8fa;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #aebfca;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #718896;
+}
+
+/* NEXA utility styles */
+
+.nexa-grid {
+  background-image:
+    linear-gradient(rgba(16, 42, 67, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16, 42, 67, 0.045) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+
+.nexa-grid-dark {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+
+.nexa-mono {
+  font-family: "Space Mono", monospace;
+}
+
+.nexa-heading {
+  font-family: "Manrope", sans-serif;
+}
