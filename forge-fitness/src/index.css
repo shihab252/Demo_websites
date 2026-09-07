@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #f4f4f0;
+  background: #0a0a0a;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #0a0a0a;
+  overflow-x: hidden;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: #d7ff38;
+  color: #0a0a0a;
+}
