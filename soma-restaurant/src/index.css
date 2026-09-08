@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap");
+@import "tailwindcss";
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #f3efe7;
+  background: #0b0b0a;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #0b0b0a;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #0b0b0a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: #b98b5b;
+  color: #0b0b0a;
+}
+
+.font-display {
+  font-family: "Instrument Serif", serif;
+}
+
+/* -------------------------------------------------------
+   EDITORIAL UTILITIES
+------------------------------------------------------- */
+
+.writing-mode-vertical {
+  writing-mode: vertical-rl;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}
+
+/* -------------------------------------------------------
+   PREMIUM IMAGE BEHAVIOR
+------------------------------------------------------- */
+
+.soma-image {
+  overflow: hidden;
+}
+
+.soma-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+  transition:
+    transform 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.8s ease;
+}
+
+.soma-image:hover img {
+  transform: scale(1.055);
+}
+
+/* -------------------------------------------------------
+   CUSTOM SCROLLBAR
+------------------------------------------------------- */
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0b0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #68645d;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b98b5b;
+}
+
+/* -------------------------------------------------------
+   MOBILE MENU / OVERLAY SUPPORT
+------------------------------------------------------- */
+
+body.menu-open {
+  overflow: hidden;
+}
+
+/* -------------------------------------------------------
+   FORM ELEMENTS
+------------------------------------------------------- */
+
+input,
+select,
+textarea {
+  outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(11, 11, 10, 0.42);
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* -------------------------------------------------------
+   RESPONSIVE TYPOGRAPHY
+------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+  .font-display {
+    letter-spacing: -0.025em;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .font-display {
+    letter-spacing: -0.02em;
+  }
+
+  /*
+    Prevent giant editorial headings from causing
+    horizontal overflow on phones.
+  */
+  h1,
+  h2,
+  h3 {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  /*
+    Disable aggressive hover image scaling on touch devices.
+  */
+  .soma-image:hover img {
+    transform: scale(1.02);
+  }
+}
+
+/* -------------------------------------------------------
+   SMALL PHONES
+------------------------------------------------------- */
+
+@media (max-width: 480px) {
+  body {
+    min-width: 320px;
+  }
+
+  /*
+    Keep the overall rhythm comfortable on small screens.
+  */
+  section {
+    scroll-margin-top: 72px;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
+
+/* -------------------------------------------------------
+   TOUCH DEVICES
+------------------------------------------------------- */
+
+@media (hover: none) and (pointer: coarse) {
+  .soma-image img {
+    transition: transform 0.8s ease;
+  }
+
+  .soma-image:hover img {
+    transform: scale(1.02);
+  }
+}
+
+/* -------------------------------------------------------
+   REDUCED MOTION
+------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* -------------------------------------------------------
+   PREMIUM SELECTION / FOCUS
+------------------------------------------------------- */
+
+:focus-visible {
+  outline: 1px solid #b98b5b;
+  outline-offset: 4px;
+}
+
+/* -------------------------------------------------------
+   MOBILE SAFE AREAS
+------------------------------------------------------- */
+
+@supports (padding: env(safe-area-inset-bottom)) {
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+}
